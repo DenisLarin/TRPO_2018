@@ -21,33 +21,28 @@ public class Main {
         Matcher dateM = date.matcher(string);
         Matcher dateTimeM = dateTime.matcher(string);
         Matcher emailM = email.matcher(string);
-        if(dateM.find()){
-            temp = dateM.replaceFirst("");
-            if (temp.length()!=0){
-                System.out.println("Строка: " + string + " не дата");
-                temp = string;
-            }
-            else
-                System.out.println("Строка: " + string + " дата");
-        }
-        else if(dateTimeM.find()){
+        if (dateTimeM.find()) {
             temp = dateTimeM.replaceFirst("");
-            if (temp.length()!=0){
+            if (temp.length() != 0) {
                 System.out.println("Строка: " + string + " не дата и время");
                 temp = string;
-            }
-            else
+            } else
                 System.out.println("Строка: " + string + " дата и время");
         }
-        else if (emailM.find()){
+        else if (dateM.find()) {
+            temp = dateM.replaceFirst("");
+            if (temp.length() != 0) {
+                System.out.println("Строка: " + string + " не дата");
+                temp = string;
+            } else
+                System.out.println("Строка: " + string + " дата");
+        } else if (emailM.find()) {
             temp = emailM.replaceFirst("");
-            if (temp.length()!=0){
+            if (temp.length() != 0) {
                 System.out.println("Строка: " + string + " не email");
-            }
-            else
+            } else
                 System.out.println("Строка: " + string + " email");
-        }
-        else{
+        } else {
             System.out.println("Данная строка не совпадает ни с одним патерном");
         }
     }
