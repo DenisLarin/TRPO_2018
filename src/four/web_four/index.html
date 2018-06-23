@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная работа 4</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/2E73D9B0-2C91-5E4E-9A84-6ACB6DED30B2/main.js" charset="UTF-8"></script></head>
+<body>
+<div class="container">
+    <h1>Лабораторная работа №4</h1>
+    <h2>Выполнил студент группы ИКБО-05-15 Ларин Денис</h2>
+    <hr>
+    <div class="form-group">
+        <label for="vid">Вид (ВТС,ETH)</label>
+        <input type="text" class="form-control" id="vid" placeholder="Enter vid" name="vid">
+    </div>
+    <div class="form-group">
+        <label for="valuta">Валюта (USD,RUB)</label>
+        <input type="text" class="form-control" id="valuta" placeholder="Enter valuta" name="valuta">
+    </div>
+    <button class="btn btn-primary" onclick="start()">Отслеживание валюты</button>
+    <hr>
+    <div id="ll" style="display: none">
+    <h2>Отслеживание в реальном времени</h2>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table border="1" class="table table-bordered table-hover table-danger">
+                <thead>
+                <tr>
+                    <th>Криптовалюта</th>
+                    <th>Валюта</th>
+                    <th>Курс</th>
+                </tr>
+                </thead>
+                <tbody id="content">
+                <tr id="load">
+                    <td colspan="3">Загрузка данных...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div></div>
+    </div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
